@@ -19,8 +19,11 @@ root.resizable(0,0)
 root.geometry("290x265")
 
 # Configuración pantalla de salida 
-pantalla = Entry(root, width=22, bg="black", fg="white", borderwidth=0, font=("arial", 18, "bold"))
-pantalla.grid(row=0, column=0, columnspan=4, padx=1, pady=1)
+pantallaGrid= Entry(root, width=22, bg="white", fg="white", borderwidth=0, font=("arial", 18, "bold"))
+pantallaGrid.grid(row=0, column=0, columnspan=4, padx=1, pady=1)
+
+pantalla = Entry(root, width=40, bg="black", fg="white", borderwidth=0, font=("arial", 18, "bold"))
+pantalla.place(in_=pantallaGrid, relx=0, rely=0, relwidth=1, relheight=1)
 
 # Configuración botones
 boton_1 = Button(root, text="1", width=9, height=3, bg="white", fg="red", borderwidth=0, cursor="hand2")
